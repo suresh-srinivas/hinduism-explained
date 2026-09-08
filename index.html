@@ -151,174 +151,221 @@
 </div>
 
 <!-- ════════════════════════════════════════════════════════════ QUIZ -->
-<div style="background:#efe4d1;padding:96px 28px">
-  <div style="max-width:760px;margin:0 auto">
+<div style="background:#efe4d1;padding:72px 28px">
+  <div style="max-width:660px;margin:0 auto">
 
-    <div style="text-align:center;margin-bottom:56px">
+    <div style="text-align:center;margin-bottom:36px">
       <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#8a7460">A little test</span>
-      <h2 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(30px,4vw,46px);margin:16px 0 16px">How well do you know Hinduism?</h2>
-      <p style="font-size:17px;line-height:1.65;color:#5c4c40;margin:0">Six questions based on the ideas in the book. No pressure — the answers are explained as you go.</p>
+      <h2 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(26px,3.6vw,38px);margin:14px 0 12px">How well do you know Hinduism?</h2>
+      <p style="font-size:15.5px;line-height:1.6;color:#5c4c40;margin:0">Six questions from the book. Pick an answer, then move on.</p>
     </div>
 
-    <div id="quiz" style="display:flex;flex-direction:column;gap:36px">
+    <!-- Carousel card -->
+    <div style="background:#f7f0e3;border:1px solid rgba(27,20,16,0.12);border-radius:3px;padding:32px 28px">
 
-      <!-- Q1 -->
-      <div class="q-block" data-answer="b">
-        <p class="q-text" style="font-family:Marcellus,serif;font-size:20px;line-height:1.45;margin:0 0 18px;color:#1b1410"><span class="q-num" style="color:#c05a17">1.</span> According to the Bhagavad Gita, what is true of the soul?</p>
-        <div class="q-options" style="display:flex;flex-direction:column;gap:10px">
-          <button class="q-opt" data-val="a">It is born with the body and dies with it</button>
-          <button class="q-opt" data-val="b">It is never born and never dies</button>
-          <button class="q-opt" data-val="c">It is created by God at the moment of birth</button>
-          <button class="q-opt" data-val="d">It resets completely with each new life</button>
-        </div>
-        <p class="q-explain" style="display:none;margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#41342b;padding:14px 18px;border-left:3px solid #c05a17;background:rgba(192,90,23,0.07)">The Gita's central teaching: <em>"The soul is never born nor dies at any time. It has not come into being, does not come into being, and will not come into being. It is unborn, eternal, ever-existing, and primeval."</em> This insight carried Dr. Shetty through two battles with cancer.</p>
+      <!-- Progress dots -->
+      <div id="quiz-dots" style="display:flex;gap:6px;justify-content:center;margin-bottom:28px">
+        <span class="qdot qdot-active"></span>
+        <span class="qdot"></span><span class="qdot"></span>
+        <span class="qdot"></span><span class="qdot"></span><span class="qdot"></span>
       </div>
 
-      <!-- Q2 -->
-      <div class="q-block" data-answer="c">
-        <p class="q-text" style="font-family:Marcellus,serif;font-size:20px;line-height:1.45;margin:0 0 18px;color:#1b1410"><span class="q-num" style="color:#c05a17">2.</span> Hinduism has one founder, one holy book, and one central authority — true or false?</p>
-        <div class="q-options" style="display:flex;flex-direction:column;gap:10px">
-          <button class="q-opt" data-val="a">True — the Vedas are the single authority</button>
-          <button class="q-opt" data-val="b">True — it was founded by Adi Shankaracharya</button>
-          <button class="q-opt" data-val="c">False — it has no single founder, book, or central office</button>
-          <button class="q-opt" data-val="d">Partially true — there is one book but many founders</button>
+      <!-- Slides -->
+      <div id="quiz-slides">
+
+        <div class="q-slide" data-answer="b">
+          <p class="q-text"><span style="color:#c05a17;font-family:Marcellus,serif">1 / 6 &nbsp;·&nbsp;</span> According to the Bhagavad Gita, what is true of the soul?</p>
+          <div class="q-options">
+            <button class="q-opt" data-val="a">It is born with the body and dies with it</button>
+            <button class="q-opt" data-val="b">It is never born and never dies</button>
+            <button class="q-opt" data-val="c">It is created by God at the moment of birth</button>
+            <button class="q-opt" data-val="d">It resets completely with each new life</button>
+          </div>
+          <p class="q-explain">The Gita's central teaching: <em>"The soul is never born nor dies at any time… It is unborn, eternal, ever-existing, and primeval."</em> This insight carried Dr. Shetty through two battles with cancer.</p>
         </div>
-        <p class="q-explain" style="display:none;margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#41342b;padding:14px 18px;border-left:3px solid #c05a17;background:rgba(192,90,23,0.07)">Unlike most world religions, Hinduism is what the book calls "open source" — no single founder, no single scripture, no central office issuing rulings. It is inclusive, pluralistic, and progressive by construction, with room for the devotee, the philosopher, the yogi, and even the atheist.</p>
+
+        <div class="q-slide" data-answer="c" style="display:none">
+          <p class="q-text"><span style="color:#c05a17;font-family:Marcellus,serif">2 / 6 &nbsp;·&nbsp;</span> Hinduism has one founder, one holy book, and one central authority — true or false?</p>
+          <div class="q-options">
+            <button class="q-opt" data-val="a">True — the Vedas are the single authority</button>
+            <button class="q-opt" data-val="b">True — it was founded by Adi Shankaracharya</button>
+            <button class="q-opt" data-val="c">False — it has no single founder, book, or central office</button>
+            <button class="q-opt" data-val="d">Partially true — there is one book but many founders</button>
+          </div>
+          <p class="q-explain">Hinduism is what the book calls "open source" — no single founder, no single scripture, no central office. Inclusive, pluralistic, and progressive by construction, with room for the devotee, the philosopher, the yogi, and even the atheist.</p>
+        </div>
+
+        <div class="q-slide" data-answer="b" style="display:none">
+          <p class="q-text"><span style="color:#c05a17;font-family:Marcellus,serif">3 / 6 &nbsp;·&nbsp;</span> How many main paths to liberation (Moksha) does Hinduism recognise?</p>
+          <div class="q-options">
+            <button class="q-opt" data-val="a">Two — devotion and meditation</button>
+            <button class="q-opt" data-val="b">Four — devotion, action, knowledge, and yoga</button>
+            <button class="q-opt" data-val="c">Three — prayer, fasting, and pilgrimage</button>
+            <button class="q-opt" data-val="d">One — there is only the path of the Gita</button>
+          </div>
+          <p class="q-explain">Four paths: Bhakti (devotion), Karma (action without attachment), Jnana (knowledge), and Raja Yoga (meditation). The book's chapter "Which Path Is Right For You?" helps readers find their own.</p>
+        </div>
+
+        <div class="q-slide" data-answer="a" style="display:none">
+          <p class="q-text"><span style="color:#c05a17;font-family:Marcellus,serif">4 / 6 &nbsp;·&nbsp;</span> At your core, Hinduism says you are —</p>
+          <div class="q-options">
+            <button class="q-opt" data-val="a">A spark of the divine — not a sinner</button>
+            <button class="q-opt" data-val="b">A sinner seeking God's forgiveness</button>
+            <button class="q-opt" data-val="c">A servant placed on earth to be tested</button>
+            <button class="q-opt" data-val="d">A temporary being with no inherent worth</button>
+          </div>
+          <p class="q-explain">One of the book's most striking chapters: "You Are Not a Sinner — You Are Divine." There is divinity in everything and everybody. Worship is an invitation, not a summons.</p>
+        </div>
+
+        <div class="q-slide" data-answer="c" style="display:none">
+          <p class="q-text"><span style="color:#c05a17;font-family:Marcellus,serif">5 / 6 &nbsp;·&nbsp;</span> What does "Dharma" most closely mean in the context of this book?</p>
+          <div class="q-options">
+            <button class="q-opt" data-val="a">Religious ritual and temple worship</button>
+            <button class="q-opt" data-val="b">The law of karma and cosmic justice</button>
+            <button class="q-opt" data-val="c">A sustainable way of community living</button>
+            <button class="q-opt" data-val="d">The duty to perform daily prayers</button>
+          </div>
+          <p class="q-explain">Swami Bodhananda Saraswati describes Dharma in the foreword as "a sustainable way of community living." It is practiced in an ordinary day — in the office, on the commute, in how you treat the person in front of you.</p>
+        </div>
+
+        <div class="q-slide" data-answer="d" style="display:none">
+          <p class="q-text"><span style="color:#c05a17;font-family:Marcellus,serif">6 / 6 &nbsp;·&nbsp;</span> Bhagavad Gita 2.40: "Even a little practice of this dharma —"</p>
+          <div class="q-options">
+            <button class="q-opt" data-val="a">…guarantees liberation in this lifetime</button>
+            <button class="q-opt" data-val="b">…earns the grace of all the gods</button>
+            <button class="q-opt" data-val="c">…must be practised daily without fail</button>
+            <button class="q-opt" data-val="d">…saves one from great fear</button>
+          </div>
+          <p class="q-explain"><em>"In this path there is no loss of effort, no harm comes of it. Even a little practice of this dharma saves one from great fear."</em> Take a single step, and the divine takes a hundred to meet you where you are.</p>
+        </div>
+
+      </div><!-- /slides -->
+
+      <!-- Nav -->
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:24px">
+        <button id="quiz-prev" onclick="quizNav(-1)" style="visibility:hidden;background:none;border:1px solid rgba(27,20,16,0.2);color:#5c4c40;padding:9px 20px;font-family:Lora,Georgia,serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;border-radius:2px;cursor:pointer">← Prev</button>
+        <button id="quiz-next" onclick="quizNav(1)" style="background:#1b1410;color:#f7f0e3;border:none;padding:9px 24px;font-family:Lora,Georgia,serif;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;border-radius:2px;cursor:pointer">Next →</button>
       </div>
 
-      <!-- Q3 -->
-      <div class="q-block" data-answer="b">
-        <p class="q-text" style="font-family:Marcellus,serif;font-size:20px;line-height:1.45;margin:0 0 18px;color:#1b1410"><span class="q-num" style="color:#c05a17">3.</span> How many main paths to liberation (Moksha) does Hinduism recognise?</p>
-        <div class="q-options" style="display:flex;flex-direction:column;gap:10px">
-          <button class="q-opt" data-val="a">Two — devotion and meditation</button>
-          <button class="q-opt" data-val="b">Four — devotion, action, knowledge, and yoga</button>
-          <button class="q-opt" data-val="c">Three — prayer, fasting, and pilgrimage</button>
-          <button class="q-opt" data-val="d">One — there is only the path of the Gita</button>
-        </div>
-        <p class="q-explain" style="display:none;margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#41342b;padding:14px 18px;border-left:3px solid #c05a17;background:rgba(192,90,23,0.07)">Hinduism offers four paths — Bhakti (devotion), Karma (action without attachment to results), Jnana (knowledge and inquiry), and Raja Yoga (meditation and mind mastery). The book's chapter "Which Path Is Right For You?" helps readers identify their own temperament.</p>
-      </div>
+    </div><!-- /card -->
 
-      <!-- Q4 -->
-      <div class="q-block" data-answer="a">
-        <p class="q-text" style="font-family:Marcellus,serif;font-size:20px;line-height:1.45;margin:0 0 18px;color:#1b1410"><span class="q-num" style="color:#c05a17">4.</span> At your core, Hinduism says you are —</p>
-        <div class="q-options" style="display:flex;flex-direction:column;gap:10px">
-          <button class="q-opt" data-val="a">A spark of the divine — not a sinner</button>
-          <button class="q-opt" data-val="b">A sinner seeking God's forgiveness</button>
-          <button class="q-opt" data-val="c">A servant placed on earth to be tested</button>
-          <button class="q-opt" data-val="d">A temporary being with no inherent worth</button>
-        </div>
-        <p class="q-explain" style="display:none;margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#41342b;padding:14px 18px;border-left:3px solid #c05a17;background:rgba(192,90,23,0.07)">One of the book's most striking chapters is titled "You Are Not a Sinner — You Are Divine." There is divinity in everything and everybody. Worship is an invitation, not a summons. For many readers this single idea changes the entire frame of how they see themselves.</p>
-      </div>
-
-      <!-- Q5 -->
-      <div class="q-block" data-answer="c">
-        <p class="q-text" style="font-family:Marcellus,serif;font-size:20px;line-height:1.45;margin:0 0 18px;color:#1b1410"><span class="q-num" style="color:#c05a17">5.</span> What does "Dharma" most closely mean in the context of this book?</p>
-        <div class="q-options" style="display:flex;flex-direction:column;gap:10px">
-          <button class="q-opt" data-val="a">Religious ritual and temple worship</button>
-          <button class="q-opt" data-val="b">The law of karma and cosmic justice</button>
-          <button class="q-opt" data-val="c">A sustainable way of community living</button>
-          <button class="q-opt" data-val="d">The duty to perform daily prayers</button>
-        </div>
-        <p class="q-explain" style="display:none;margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#41342b;padding:14px 18px;border-left:3px solid #c05a17;background:rgba(192,90,23,0.07)">Dharma is a complex concept involving beliefs, values, and practices held together by a thread of common purpose — described in the foreword by Swami Bodhananda Saraswati as "a sustainable way of community living." It is something you practice in an ordinary day — in the office, on the commute, in how you treat the person in front of you.</p>
-      </div>
-
-      <!-- Q6 -->
-      <div class="q-block" data-answer="d">
-        <p class="q-text" style="font-family:Marcellus,serif;font-size:20px;line-height:1.45;margin:0 0 18px;color:#1b1410"><span class="q-num" style="color:#c05a17">6.</span> The Bhagavad Gita verse 2.40 says: "Even a little practice of this dharma —"</p>
-        <div class="q-options" style="display:flex;flex-direction:column;gap:10px">
-          <button class="q-opt" data-val="a">…guarantees liberation in this lifetime"</button>
-          <button class="q-opt" data-val="b">…earns the grace of all the gods"</button>
-          <button class="q-opt" data-val="c">…must be practised daily without fail"</button>
-          <button class="q-opt" data-val="d">…saves one from great fear"</button>
-        </div>
-        <p class="q-explain" style="display:none;margin:14px 0 0;font-size:15.5px;line-height:1.65;color:#41342b;padding:14px 18px;border-left:3px solid #c05a17;background:rgba(192,90,23,0.07)"><em>"In this path there is no loss of effort, no harm comes of it. Even a little practice of this dharma saves one from great fear."</em> — Bhagavad Gita 2.40. The promise is extraordinary: you don't have to be perfect. Take a single step, and the divine takes a hundred to meet you where you are.</p>
-      </div>
-
-    </div><!-- /quiz -->
-
-    <!-- Score area -->
-    <div id="quiz-footer" style="margin-top:48px;text-align:center">
-      <button id="quiz-submit" onclick="submitQuiz()" style="background:#1b1410;color:#f7f0e3;padding:16px 44px;font-family:Lora,Georgia,serif;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;border:none;border-radius:2px;cursor:pointer">See Your Score</button>
-    </div>
-    <div id="quiz-result" style="display:none;margin-top:40px;text-align:center">
-      <p id="quiz-score" style="font-family:Marcellus,serif;font-size:clamp(32px,5vw,54px);color:#1b1410;margin:0"></p>
-      <p id="quiz-message" style="font-size:18px;line-height:1.65;color:#5c4c40;margin:16px 0 32px;text-wrap:pretty"></p>
-      <a href="#download" style="background:#c05a17;color:#f7f0e3;padding:15px 36px;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;display:inline-block">Read the Full Book — Free</a>
+    <!-- Result (shown after last question) -->
+    <div id="quiz-result" style="display:none;text-align:center;margin-top:28px;padding:28px;background:#f7f0e3;border:1px solid rgba(27,20,16,0.12);border-radius:3px">
+      <p id="quiz-score" style="font-family:Marcellus,serif;font-size:clamp(36px,6vw,58px);color:#1b1410;margin:0 0 12px"></p>
+      <p id="quiz-message" style="font-size:16.5px;line-height:1.65;color:#5c4c40;margin:0 0 24px;text-wrap:pretty"></p>
+      <a href="#download" style="background:#c05a17;color:#f7f0e3;padding:14px 32px;font-size:13.5px;letter-spacing:0.08em;text-transform:uppercase;border-radius:2px;display:inline-block">Read the Full Book — Free</a>
     </div>
 
   </div>
 </div>
 
 <style>
+  .qdot { display:inline-block;width:7px;height:7px;border-radius:50%;background:rgba(27,20,16,0.18);transition:background 0.2s; }
+  .qdot-active { background:#c05a17; }
+  .q-text { font-family:Marcellus,serif;font-size:18px;line-height:1.5;margin:0 0 16px;color:#1b1410; }
+  .q-options { display:flex;flex-direction:column;gap:8px; }
   .q-opt {
-    text-align:left; padding:14px 18px; font-family:Lora,Georgia,serif; font-size:16px;
-    color:#1b1410; background:#f7f0e3; border:1px solid rgba(27,20,16,0.18);
-    border-radius:2px; cursor:pointer; transition:border-color 0.15s, background 0.15s; line-height:1.45;
+    text-align:left;padding:11px 14px;font-family:Lora,Georgia,serif;font-size:15px;
+    color:#1b1410;background:#efe4d1;border:1.5px solid rgba(27,20,16,0.15);
+    border-radius:2px;cursor:pointer;transition:border-color 0.12s,background 0.12s;line-height:1.4;
   }
-  .q-opt:hover:not(:disabled) { border-color:#1b1410; background:#fff; }
-  .q-opt.correct  { background:#e8f5e9; border-color:#4caf50; color:#1b5e20; font-weight:500; }
-  .q-opt.wrong    { background:#fce4e4; border-color:#e53935; color:#7f0000; }
-  .q-opt.reveal   { background:#e8f5e9; border-color:#4caf50; color:#1b5e20; }
-  .q-opt:disabled { cursor:default; }
+  .q-opt:hover:not(:disabled) { border-color:#8a7460;background:#e8deca; }
+  .q-opt.selected  { background:#fdf0e4;border-color:#c05a17;color:#1b1410;font-style:italic; }
+  .q-opt.correct   { background:#e8f5e9;border-color:#4caf50;color:#1b5e20;font-style:normal;font-weight:500; }
+  .q-opt.wrong     { background:#fce4e4;border-color:#e53935;color:#7f0000;font-style:normal; }
+  .q-opt.reveal    { background:#e8f5e9;border-color:#4caf50;color:#1b5e20; }
+  .q-opt:disabled  { cursor:default; }
+  .q-explain {
+    display:none;margin:14px 0 0;font-size:14.5px;line-height:1.65;color:#41342b;
+    padding:12px 16px;border-left:3px solid #c05a17;background:rgba(192,90,23,0.07);
+  }
 </style>
 
 <script>
-function submitQuiz() {
-  var blocks = document.querySelectorAll('.q-block');
-  var score = 0;
-  var answered = 0;
+(function(){
+  var slides  = Array.from(document.querySelectorAll('.q-slide'));
+  var dots    = Array.from(document.querySelectorAll('.qdot'));
+  var answers = {};   // { slideIndex: 'a'|'b'|'c'|'d' }
+  var cur     = 0;
+  var scored  = false;
 
-  blocks.forEach(function(block) {
-    var correct = block.getAttribute('data-answer');
-    var chosen  = block.querySelector('.q-opt.selected');
-    var opts    = block.querySelectorAll('.q-opt');
+  function goTo(n) {
+    slides[cur].style.display = 'none';
+    dots[cur].classList.remove('qdot-active');
+    cur = n;
+    slides[cur].style.display = 'block';
+    dots[cur].classList.add('qdot-active');
+    document.getElementById('quiz-prev').style.visibility = cur === 0 ? 'hidden' : 'visible';
+    var nextBtn = document.getElementById('quiz-next');
+    nextBtn.textContent = cur === slides.length - 1 ? 'See My Score →' : 'Next →';
+    // Restore selected state on revisit
+    restoreSelected(cur);
+  }
 
-    opts.forEach(function(o) { o.disabled = true; });
-
-    if (chosen) {
-      answered++;
-      if (chosen.getAttribute('data-val') === correct) {
-        chosen.classList.add('correct');
-        score++;
-      } else {
-        chosen.classList.add('wrong');
-      }
-    }
-    // Always reveal the right answer
+  function restoreSelected(idx) {
+    var opts = slides[idx].querySelectorAll('.q-opt');
     opts.forEach(function(o) {
-      if (o.getAttribute('data-val') === correct && !o.classList.contains('correct')) {
-        o.classList.add('reveal');
-      }
+      o.classList.toggle('selected', o.getAttribute('data-val') === answers[idx]);
     });
-    block.querySelector('.q-explain').style.display = 'block';
+  }
+
+  // Click to select — stays highlighted, no reveal yet
+  document.querySelectorAll('.q-opt').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      if (scored) return;
+      var opts = this.closest('.q-options').querySelectorAll('.q-opt');
+      opts.forEach(function(o) { o.classList.remove('selected'); });
+      this.classList.add('selected');
+      answers[cur] = this.getAttribute('data-val');
+    });
   });
 
-  document.getElementById('quiz-submit').style.display = 'none';
-  document.getElementById('quiz-result').style.display  = 'block';
-  document.getElementById('quiz-score').textContent = score + ' / 6';
-
-  var messages = {
-    6: "Perfect score. You already know Hinduism — now read the book and see how much richer it gets.",
-    5: "Excellent. One slip, but you clearly have a feel for the tradition.",
-    4: "Good foundation. The book will fill in the gaps with the author's characteristic warmth.",
-    3: "A fair start. You know more than most — the book will give the ideas real depth.",
-    2: "Curious and open — that's the best place to begin. The book was written exactly for you.",
-    1: "The tradition is vast and you've just scratched the surface. That's perfect — so did the author, once.",
-    0: "Every expert was once a beginner. Download the book — by the last page, you'll answer every one of these."
+  window.quizNav = function(dir) {
+    var next = cur + dir;
+    if (next < 0) return;
+    if (next >= slides.length) { showScore(); return; }
+    goTo(next);
   };
-  document.getElementById('quiz-message').textContent = messages[score];
 
-  document.getElementById('quiz-result').scrollIntoView({ behavior:'smooth', block:'center' });
-}
-
-document.querySelectorAll('.q-opt').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    if (this.disabled) return;
-    var siblings = this.closest('.q-options').querySelectorAll('.q-opt');
-    siblings.forEach(function(s) { s.classList.remove('selected'); });
-    this.classList.add('selected');
-  });
-});
+  function showScore() {
+    if (scored) return;
+    scored = true;
+    var score = 0;
+    slides.forEach(function(slide, idx) {
+      var correct = slide.getAttribute('data-answer');
+      var chosen  = answers[idx];
+      var opts    = slide.querySelectorAll('.q-opt');
+      opts.forEach(function(o) { o.disabled = true; });
+      if (chosen === correct) score++;
+      opts.forEach(function(o) {
+        var v = o.getAttribute('data-val');
+        if (v === chosen && v === correct)   o.classList.add('correct');
+        else if (v === chosen)               o.classList.add('wrong');
+        else if (v === correct)              o.classList.add('reveal');
+        o.classList.remove('selected');
+      });
+      slide.querySelector('.q-explain').style.display = 'block';
+    });
+    // Show last slide with results visible
+    slides[cur].style.display = 'block';
+    document.getElementById('quiz-next').style.display = 'none';
+    document.getElementById('quiz-prev').style.display = 'none';
+    var result = document.getElementById('quiz-result');
+    result.style.display = 'block';
+    document.getElementById('quiz-score').textContent = score + ' / 6';
+    var msgs = [
+      "Every expert was once a beginner. Download the book — by the last page, you'll answer every one of these.",
+      "The tradition is vast and you've just scratched the surface. That's perfect — so did the author, once.",
+      "Curious and open — that's the best place to begin. The book was written exactly for you.",
+      "A fair start. You know more than most — the book will give the ideas real depth.",
+      "Good foundation. The book will fill in the gaps with warmth and clarity.",
+      "Excellent. One slip, but you clearly have a feel for this tradition.",
+      "Perfect score. You already know Hinduism — now read the book and see how much richer it gets."
+    ];
+    document.getElementById('quiz-message').textContent = msgs[score];
+    result.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }
+})();
 </script>
 
 <!-- ════════════════════════════════════════════════════════════ PULL QUOTE -->

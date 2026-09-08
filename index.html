@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hinduism Explained — Dr. Anupkumar Shetty, MD</title>
+  <title>Hinduism Explained — Dr. Anupkumar Shetty, MD (1963–2026)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+Kannada:wght@400;600&display=swap" rel="stylesheet" />
@@ -21,21 +21,29 @@
     .btn-get-book { background: #1b1410; color: #f7f0e3; padding: 11px 22px; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 2px; }
     .btn-get-book:hover { background: #c05a17; color: #f7f0e3; }
 
-    /* ── Buy buttons (light background) ── */
-    .btn-pdf { background: #c05a17; color: #f7f0e3; padding: 17px 32px; border-radius: 2px; display: inline-flex; align-items: baseline; gap: 12px; }
-    .btn-pdf:hover { background: #a2470f; color: #f7f0e3; }
-    .btn-amazon { border: 1px solid #1b1410; color: #1b1410; padding: 17px 32px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; display: inline-block; }
-    .btn-amazon:hover { background: #1b1410; color: #f7f0e3; }
-    .btn-kindle { border: 1px solid rgba(27,20,16,0.3); color: #5c4c40; padding: 17px 32px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; display: inline-block; }
-    .btn-kindle:hover { border-color: #1b1410; color: #1b1410; }
+    /* ── Download button (light background) ── */
+    .btn-download { background: #c05a17; color: #f7f0e3; padding: 17px 36px; border-radius: 2px; display: inline-block; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .btn-download:hover { background: #a2470f; color: #f7f0e3; }
 
-    /* ── Buy buttons (dark background) ── */
-    .btn-pdf-dark { background: #c9873f; color: #1b1410; padding: 17px 32px; border-radius: 2px; display: inline-flex; align-items: baseline; gap: 12px; }
-    .btn-pdf-dark:hover { background: #f7f0e3; color: #1b1410; }
-    .btn-amazon-dark { border: 1px solid rgba(247,240,227,0.5); color: #f7f0e3; padding: 17px 32px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; display: inline-block; }
-    .btn-amazon-dark:hover { border-color: #f7f0e3; background: rgba(247,240,227,0.08); }
-    .btn-kindle-dark { border: 1px solid rgba(247,240,227,0.32); color: #c9bcab; padding: 17px 32px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 2px; display: inline-block; }
-    .btn-kindle-dark:hover { border-color: #f7f0e3; color: #f7f0e3; }
+    /* ── Download button (dark background) ── */
+    .btn-download-dark { background: #c9873f; color: #1b1410; padding: 17px 36px; border-radius: 2px; display: inline-block; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .btn-download-dark:hover { background: #f7f0e3; color: #1b1410; }
+
+    /* ── Memorial banner ── */
+    .memorial-banner { background: rgba(27,20,16,0.06); border-top: 1px solid rgba(27,20,16,0.15); border-bottom: 1px solid rgba(27,20,16,0.15); padding: 18px 28px; text-align: center; font-size: 15px; color: #5c4c40; letter-spacing: 0.03em; }
+
+    /* ── Form styles ── */
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7460; }
+    .form-field input, .form-field select { padding: 13px 16px; font-family: Lora, Georgia, serif; font-size: 16px; color: #1b1410; background: #fff; border: 1px solid rgba(27,20,16,0.22); border-radius: 2px; outline: none; width: 100%; }
+    .form-field input:focus, .form-field select:focus { border-color: #c05a17; }
+    .btn-submit { background: #c05a17; color: #f7f0e3; padding: 16px 40px; font-family: Lora, Georgia, serif; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; width: 100%; margin-top: 8px; }
+    .btn-submit:hover { background: #a2470f; }
+    .btn-submit:disabled { background: #b58e50; cursor: wait; }
+    .form-note { font-size: 13.5px; color: #8a7460; line-height: 1.6; margin: 0; }
+    .radio-group { display: flex; gap: 24px; align-items: center; margin-top: 4px; }
+    .radio-group label { font-size: 16px; text-transform: none; letter-spacing: 0; color: #1b1410; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+    #copies-row { display: none; }
 
     /* ── Misc links ── */
     .watch-yt { color: #8a7460; border-bottom: 1px solid rgba(138,116,96,0.4); }
@@ -78,9 +86,14 @@
         <a href="#inside" class="nav-link">What's Inside</a>
         <a href="#author" class="nav-link">The Author</a>
       </div>
-      <a href="#buy" class="btn-get-book">Get the Book</a>
+      <a href="#download" class="btn-get-book">Download Free</a>
     </div>
   </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ MEMORIAL BANNER -->
+<div class="memorial-banner">
+  In loving memory of <strong>Dr. Anupkumar Shetty, MD (1963–2026)</strong> — his family has made this book freely available to all.
 </div>
 
 <!-- ════════════════════════════════════════════════════════════ HERO -->
@@ -94,7 +107,7 @@
     <h1 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(46px,7vw,88px);line-height:1.02;margin:0;letter-spacing:-0.01em;text-wrap:balance">Hinduism<br>Explained</h1>
     <p style="font-family:Marcellus,serif;font-size:clamp(18px,2.2vw,25px);color:#6d4a2a;margin:26px 0 0;line-height:1.4;text-wrap:pretty">The Essence of Bhagavad Gita, OM, Yoga and Infinity</p>
     <p style="font-size:17px;line-height:1.6;color:#5c4c40;margin:22px auto 0;max-width:620px;text-wrap:pretty">A beginner's guide to inner peace, stress relief and spiritual clarity — the world's oldest living religion, explained in a common man's language.</p>
-    <p style="font-size:14px;letter-spacing:0.14em;text-transform:uppercase;color:#8a7460;margin:30px 0 0">Dr. Anupkumar Shetty, MD</p>
+    <p style="font-size:14px;letter-spacing:0.14em;text-transform:uppercase;color:#8a7460;margin:30px 0 0">Dr. Anupkumar Shetty, MD &nbsp;·&nbsp; 1963–2026</p>
   </div>
 </div>
 
@@ -128,18 +141,10 @@
       <a href="https://www.youtube.com/watch?v=Y_ruGIZOxmI" target="_blank" rel="noopener" class="watch-yt">Watch on YouTube</a>
     </p>
 
-    <!-- Buy buttons -->
-    <div id="buy" style="display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:44px">
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
-        <a href="#" class="btn-pdf">
-          <span style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase">Buy Instant PDF</span>
-          <span style="font-size:12px;letter-spacing:0.06em;color:#f0d0aa">Save 25%</span>
-        </a>
-        <a href="#" class="btn-amazon">Buy Physical Edition (Amazon)</a>
-        <a href="#" class="btn-kindle">Kindle Edition</a>
-      </div>
-      <p style="font-size:13.5px;letter-spacing:0.04em;color:#8a7460;margin:4px 0 0">Instant digital access • Kindle • Premium print on Amazon</p>
-      <p style="font-size:14.5px;color:#5c4c40;margin:0">Can't afford it? <a href="#free">Get a free copy</a></p>
+    <!-- Download CTA -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:44px">
+      <a href="#download" class="btn-download">Download Free PDF</a>
+      <p style="font-size:13.5px;letter-spacing:0.04em;color:#8a7460;margin:0">Free from the author's family · takes 30 seconds</p>
     </div>
 
   </div>
@@ -294,18 +299,10 @@
       </ul>
     </div>
 
-    <!-- Buy buttons -->
-    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:60px">
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
-        <a href="#" class="btn-pdf">
-          <span style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase">Buy Instant PDF</span>
-          <span style="font-size:12px;letter-spacing:0.06em;color:#f0d0aa">Save 25%</span>
-        </a>
-        <a href="#" class="btn-amazon">Buy Physical Edition (Amazon)</a>
-        <a href="#" class="btn-kindle">Kindle Edition</a>
-      </div>
-      <p style="font-size:13.5px;letter-spacing:0.04em;color:#8a7460;margin:4px 0 0">Instant digital access • Kindle • Premium print on Amazon</p>
-      <p style="font-size:14.5px;color:#5c4c40;margin:0">Can't afford it? <a href="#free">Get a free copy</a></p>
+    <!-- Download CTA -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:60px">
+      <a href="#download" class="btn-download">Download Free PDF</a>
+      <p style="font-size:13.5px;letter-spacing:0.04em;color:#8a7460;margin:0">Free from the author's family · takes 30 seconds</p>
     </div>
   </div>
 </div>
@@ -374,7 +371,7 @@
     <img src="uploads/author_photo-1785430204036.jpeg" alt="Dr. Anupkumar Shetty" style="width:200px;height:200px;object-fit:cover;border-radius:50%;filter:saturate(0.95)" />
     <div>
       <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#8a7460">About the author</span>
-      <h2 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(28px,3.4vw,40px);margin:16px 0 22px">Dr. Anupkumar Shetty, MD</h2>
+      <h2 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(28px,3.4vw,40px);margin:16px 0 22px">Dr. Anupkumar Shetty, MD <span style="font-size:0.6em;color:#8a7460;font-family:Lora,serif;font-weight:400">(1963–2026)</span></h2>
       <p style="font-size:17.5px;line-height:1.72;color:#41342b;margin:0 0 18px;text-wrap:pretty">A physician, a two-time cancer survivor, and a lifelong student of Hinduism. He grew up in Udupi, India — the town of the Krishna Temple and of Adi Shankaracharya — and built his career in medicine in the United States, where he raised his family.</p>
       <p style="font-size:17.5px;line-height:1.72;color:#41342b;margin:0 0 18px;text-wrap:pretty">His first book, <em>Hinduism Simplified</em>, was released in India by Sri Sri Sri Vishwesha Teertha Swamiji of Udupi Pejawara Matt and in the USA by Swami Medhananda. He also wrote <em>The Power of Infinity</em>. He remains, in his own words, a student — offering no new information, only a simpler summary of what he believes every person in the world should know about Hinduism.</p>
       <p style="font-size:15px;line-height:1.7;color:#6d5c4c;margin:0;font-style:italic">With a foreword by Swami Bodhananda Saraswati and poems contributed by Dr. Raju.</p>
@@ -382,14 +379,58 @@
   </div>
 </div>
 
-<!-- ════════════════════════════════════════════════════════════ FREE COPY -->
-<div id="free" style="padding:110px 28px;scroll-margin-top:90px">
-  <div class="free-copy-box" style="max-width:760px;margin:0 auto;text-align:center;border:1px solid rgba(27,20,16,0.18);padding:64px 44px">
-    <span style="font-family:'Noto Serif Devanagari',serif;font-size:30px;color:#c05a17;display:block;margin-bottom:24px">ॐ</span>
-    <h2 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(27px,3.4vw,38px);line-height:1.24;margin:0 0 20px">If the price is what's stopping you, ask.</h2>
-    <p style="font-size:17.5px;line-height:1.7;color:#41342b;margin:0 0 26px;text-wrap:pretty">This book was written to be shared, not sold. If you're a student, a temple library, a classroom teacher, or simply cannot afford a copy right now — write to us and we will send you the digital edition free.</p>
-    <p style="font-size:15.5px;line-height:1.7;color:#6d5c4c;margin:0 0 32px;text-wrap:pretty">All we ask is your name and email, and that you point anyone you'd like to share it with back to this site so they can request their own copy — please don't pass the file along.</p>
-    <a href="mailto:hello@hinduismexplained.com?subject=Request%20for%20a%20free%20copy" class="btn-free-copy">Request a free copy</a>
+<!-- ════════════════════════════════════════════════════════════ DOWNLOAD FORM -->
+<div id="download" style="padding:110px 28px;scroll-margin-top:80px">
+  <div class="free-copy-box" style="max-width:680px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <span style="font-family:'Noto Serif Devanagari',serif;font-size:30px;color:#c05a17;display:block;margin-bottom:20px">ॐ</span>
+      <h2 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(27px,3.4vw,38px);line-height:1.24;margin:0 0 18px">Download the Book</h2>
+      <p style="font-size:17px;line-height:1.7;color:#41342b;margin:0;text-wrap:pretty">Dr. Shetty's family has made this book freely available to everyone. Fill in your details and your download will begin immediately.</p>
+    </div>
+
+    <!-- Form -->
+    <form id="download-form" style="display:flex;flex-direction:column;gap:20px" novalidate>
+      <div class="form-field">
+        <label for="f-name">Full Name <span style="color:#c05a17">*</span></label>
+        <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="Your full name">
+      </div>
+      <div class="form-field">
+        <label for="f-email">Email Address <span style="color:#c05a17">*</span></label>
+        <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="you@example.com">
+      </div>
+      <div class="form-field">
+        <label for="f-whatsapp">WhatsApp Number <span style="color:#8a7460;font-size:11px;text-transform:none;letter-spacing:0">(optional)</span></label>
+        <input type="tel" id="f-whatsapp" name="whatsapp" autocomplete="tel" placeholder="+1 555 000 0000">
+      </div>
+      <div class="form-field">
+        <label>Would you like a printed copy? <span style="color:#c05a17">*</span></label>
+        <div class="radio-group">
+          <label><input type="radio" name="printed" value="Yes" required> Yes</label>
+          <label><input type="radio" name="printed" value="No" required checked> No</label>
+        </div>
+      </div>
+      <div class="form-field" id="copies-row">
+        <label for="f-copies">How many printed copies?</label>
+        <select id="f-copies" name="copies">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="5">5</option>
+          <option value="10">10+</option>
+        </select>
+      </div>
+      <div id="form-error" style="display:none;color:#c05a17;font-size:14px;padding:10px 14px;border:1px solid rgba(192,90,23,0.35);border-radius:2px"></div>
+      <button type="submit" class="btn-submit" id="submit-btn">Download Free PDF</button>
+      <p class="form-note" style="text-align:center">We'll never share your details. If you'd like a printed copy, the family will be in touch separately.</p>
+    </form>
+
+    <!-- Success state -->
+    <div id="download-success" style="display:none;text-align:center;padding:20px 0">
+      <div style="font-size:36px;margin-bottom:16px">🙏</div>
+      <h3 style="font-family:Marcellus,serif;font-weight:400;font-size:26px;margin:0 0 16px">Thank you</h3>
+      <p style="font-size:17px;line-height:1.7;color:#41342b;margin:0 0 32px">Your download should begin automatically. If not, click below.</p>
+      <a id="manual-download" href="hinduism-explained.pdf" download class="btn-download" style="display:inline-block">Download PDF</a>
+    </div>
   </div>
 </div>
 
@@ -397,22 +438,14 @@
 <div style="background:#1b1410;color:#f2e8d8;padding:104px 28px 56px">
   <div style="max-width:1000px;margin:0 auto;text-align:center">
     <h2 style="font-family:Marcellus,serif;font-weight:400;font-size:clamp(32px,4.4vw,52px);line-height:1.16;margin:0 auto 22px;max-width:820px;color:#f7f0e3;text-wrap:balance">There is divinity in everything and everybody</h2>
-    <p style="font-size:18px;line-height:1.7;color:#c9bcab;margin:0 auto 40px;max-width:560px;text-wrap:pretty">Read it yourself. Then give it to the young Hindu reconnecting with their roots, to the partner entering a Hindu family, or to anyone who is simply curious.</p>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;width:min(1000px,100%);margin:0 auto">
-      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center">
-        <a href="#" class="btn-pdf-dark">
-          <span style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase">Buy Instant PDF</span>
-          <span style="font-size:12px;letter-spacing:0.06em;color:#6b4614">Save 25%</span>
-        </a>
-        <a href="#" class="btn-amazon-dark">Buy Physical Edition (Amazon)</a>
-        <a href="#" class="btn-kindle-dark">Kindle Edition</a>
-      </div>
-      <p style="font-size:13.5px;letter-spacing:0.04em;color:#8f8072;margin:4px 0 0">Instant digital access • Kindle • Premium print on Amazon</p>
-      <p style="font-size:14.5px;color:#c9bcab;margin:0">Can't afford it? <a href="#free" class="free-copy-link">Get a free copy</a></p>
+    <p style="font-size:18px;line-height:1.7;color:#c9bcab;margin:0 auto 40px;max-width:560px;text-wrap:pretty">Read it yourself. Then share this page with anyone who is curious — a young Hindu reconnecting with their roots, a partner entering a Hindu family, or a seeker looking for clarity.</p>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:min(1000px,100%);margin:0 auto">
+      <a href="#download" class="btn-download-dark">Download Free PDF</a>
+      <p style="font-size:13.5px;letter-spacing:0.04em;color:#8f8072;margin:0">Free from the author's family · takes 30 seconds</p>
     </div>
   </div>
   <div style="max-width:1080px;margin:82px auto 0;padding-top:30px;border-top:1px solid rgba(247,240,227,0.16);display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;font-size:13.5px;color:#8f8072">
-    <span>© 2026 Anupkumar Shetty · Third Eye Publishers</span>
+    <span>© 2026 The Family of Dr. Anupkumar Shetty · Third Eye Publishers</span>
     <div style="display:flex;gap:22px">
       <a href="#top" class="footer-link">Back to top</a>
       <a href="mailto:hello@hinduismexplained.com" class="footer-link">Contact</a>
@@ -427,6 +460,66 @@
     player.style.display = 'block';
     document.getElementById('yt-iframe').src =
       'https://www.youtube-nocookie.com/embed/Y_ruGIZOxmI?rel=0&modestbranding=1&autoplay=1';
+  }
+
+  // Show/hide printed copies field
+  document.querySelectorAll('input[name="printed"]').forEach(function(r) {
+    r.addEventListener('change', function() {
+      document.getElementById('copies-row').style.display =
+        this.value === 'Yes' ? 'flex' : 'none';
+    });
+  });
+
+  // Download form — submits silently to Google Forms, then triggers PDF download
+  var FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSdhoeFMC9Cavai7a_X72bv3Yw6IdJLIbVawsiWMsXEp2cx-yQ/formResponse';
+
+  document.getElementById('download-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name    = document.getElementById('f-name').value.trim();
+    var email   = document.getElementById('f-email').value.trim();
+    var printed = document.querySelector('input[name="printed"]:checked');
+    var errEl   = document.getElementById('form-error');
+    errEl.style.display = 'none';
+
+    if (!name) { showError('Please enter your full name.'); return; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('Please enter a valid email address.'); return; }
+    if (!printed) { showError('Please indicate whether you need a printed copy.'); return; }
+
+    var btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Downloading…';
+
+    var body = new URLSearchParams({
+      'entry.1707750322': name,
+      'entry.119379956':  email,
+      'entry.371506251':  document.getElementById('f-whatsapp').value.trim(),
+      'entry.944210565':  printed.value,
+      'entry.482455069':  document.getElementById('f-copies').value,
+      'fvv': '1',
+      'partialResponse': '[null,null,""]',
+      'pageHistory': '0',
+      'fbzx': Date.now()
+    });
+
+    // Fire-and-forget — Google Forms requires no-cors
+    fetch(FORM_ACTION, { method: 'POST', mode: 'no-cors', body: body }).catch(function(){});
+
+    // Trigger PDF download immediately after submitting
+    var link = document.createElement('a');
+    link.href = 'hinduism-explained.pdf';
+    link.download = 'Hinduism Explained - Dr. Anupkumar Shetty.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    document.getElementById('download-form').style.display = 'none';
+    document.getElementById('download-success').style.display = 'block';
+  });
+
+  function showError(msg) {
+    var el = document.getElementById('form-error');
+    el.textContent = msg;
+    el.style.display = 'block';
   }
 </script>
 </body>
